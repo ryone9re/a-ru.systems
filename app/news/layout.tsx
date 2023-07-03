@@ -2,7 +2,7 @@ import Hero from '@/components/Hero';
 import Sheet from '@/components/Sheet';
 
 export const metadata = {
-  title: 'ニュース｜シンプルなコーポレートサイト',
+  title: 'ニュース｜アールシステム',
 };
 
 type Props = {
