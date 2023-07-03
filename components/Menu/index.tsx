@@ -36,7 +36,14 @@ export default function Menu() {
           </li>
         </ul>
         <button className={cx(styles.button, styles.close)} onClick={close}>
-          <Image src="/close.svg" alt="閉じる" width={24} height={24} priority />
+          <Image
+            loader={microCMSLoader}
+            src="/close.svg"
+            alt="閉じる"
+            width={24}
+            height={24}
+            priority
+          />
         </button>
       </nav>
       <button className={styles.button} onClick={open}>

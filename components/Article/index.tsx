@@ -1,9 +1,10 @@
-import Image from 'next/image';
-import { formatRichText } from '@/libs/utils';
+import { microCMSLoader } from '@/libs/loader';
 import { type Article } from '@/libs/microcms';
+import { formatRichText } from '@/libs/utils';
+import Image from 'next/image';
+import Category from '../Category';
 import PublishedDate from '../Date';
 import styles from './index.module.css';
-import Category from '../Category';
 
 type Props = {
   data: Article;
@@ -20,6 +21,7 @@ export default function Article({ data }: Props) {
       </div>
       {data.thumbnail && (
         <Image
+          loader={microCMSLoader}
           src={data.thumbnail?.url}
           alt=""
           className={styles.thumbnail}
