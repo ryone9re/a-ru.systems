@@ -105,8 +105,3 @@ export const getMembersList = async (queries?: MicroCMSQueries) => {
     .catch(notFound);
   return listData;
 };
-
-// 画像最適化ローダー
-export const microCMSLoader = ({ src, width }: { src: string; width: number }) => {
-  return `${src}?auto=format&fit=max&w=${width}`;
-};

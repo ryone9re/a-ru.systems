@@ -1,4 +1,5 @@
-import { getMembersList, microCMSLoader } from '@/libs/microcms';
+import { microCMSLoader } from '@/libs/loader';
+import { getMembersList } from '@/libs/microcms';
 import Image from 'next/image';
 import styles from './page.module.css';
 

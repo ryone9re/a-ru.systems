@@ -1,4 +1,5 @@
-import { Article, microCMSLoader } from '@/libs/microcms';
+import { microCMSLoader } from '@/libs/loader';
+import { Article } from '@/libs/microcms';
 import Image from 'next/image';
 import Link from 'next/link';
 import Category from '../Category';

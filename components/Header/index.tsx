@@ -1,5 +1,5 @@
 import Menu from '@/components/Menu';
-import { microCMSLoader } from '@/libs/microcms';
+import { microCMSLoader } from '@/libs/loader';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './index.module.css';

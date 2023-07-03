@@ -1,4 +1,4 @@
-import { microCMSLoader } from '@/libs/microcms';
+import { microCMSLoader } from '@/libs/loader';
 import Image from 'next/image';
 import styles from './index.module.css';
 

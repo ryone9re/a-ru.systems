@@ -1,5 +1,5 @@
 'use client';
-import { microCMSLoader } from '@/libs/microcms';
+import { microCMSLoader } from '@/libs/loader';
 import cx from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';

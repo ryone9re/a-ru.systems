@@ -1,7 +1,8 @@
 import ButtonLink from '@/components/ButtonLink';
 import NewsList from '@/components/NewsList';
 import { TOP_NEWS_LIMIT } from '@/constants';
-import { getNewsList, microCMSLoader } from '@/libs/microcms';
+import { microCMSLoader } from '@/libs/loader';
+import { getNewsList } from '@/libs/microcms';
 import Image from 'next/image';
 import styles from './page.module.css';
 
