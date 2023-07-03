@@ -1,8 +1,9 @@
 'use client';
+import { microCMSLoader } from '@/libs/microcms';
+import cx from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import cx from 'classnames';
 import styles from './index.module.css';
 
 export default function Menu() {
@@ -39,7 +40,14 @@ export default function Menu() {
         </button>
       </nav>
       <button className={styles.button} onClick={open}>
-        <Image src="/menu.svg" alt="メニュー" width={24} height={24} priority />
+        <Image
+          loader={microCMSLoader}
+          src="/menu.svg"
+          alt="メニュー"
+          width={24}
+          height={24}
+          priority
+        />
       </button>
     </div>
   );

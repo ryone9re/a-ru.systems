@@ -1,4 +1,5 @@
 import Menu from '@/components/Menu';
+import { microCMSLoader } from '@/libs/microcms';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './index.module.css';
@@ -8,6 +9,7 @@ export default function Header() {
     <header className={styles.header}>
       <Link href="/" className={styles.logoLink}>
         <Image
+          loader={microCMSLoader}
           src="/logo.svg"
           alt="SIMPLE"
           className={styles.logo}

@@ -1,7 +1,7 @@
 import ButtonLink from '@/components/ButtonLink';
 import NewsList from '@/components/NewsList';
 import { TOP_NEWS_LIMIT } from '@/constants';
-import { getNewsList } from '@/libs/microcms';
+import { getNewsList, microCMSLoader } from '@/libs/microcms';
 import Image from 'next/image';
 import styles from './page.module.css';
 
@@ -20,7 +20,14 @@ export default async function Page() {
             高品質なシステムを素早く開発・展開するアールシステムです。
           </p>
         </div>
-        <Image className={styles.bgimg} src="/img-mv.jpg" alt="" width={3600} height={1200} />
+        <Image
+          loader={microCMSLoader}
+          className={styles.bgimg}
+          src="/img-mv.jpg"
+          alt=""
+          width={3600}
+          height={1200}
+        />
       </section>
       <section className={styles.news}>
         <h2 className={styles.newsTitle}>News</h2>
@@ -42,6 +49,7 @@ export default async function Page() {
             <ButtonLink href="">サービスページへ</ButtonLink>
           </div>
           <Image
+            loader={microCMSLoader}
             className={styles.businessImg}
             src="/img-business.png"
             alt=""
@@ -54,6 +62,7 @@ export default async function Page() {
         <section className={styles.section}>
           <div className={styles.horizontal}>
             <Image
+              loader={microCMSLoader}
               className={styles.aboutusImg}
               src="/img-aboutus.jpg"
               alt=""
@@ -95,6 +104,7 @@ export default async function Page() {
             <ButtonLink href="">採用情報へ</ButtonLink>
           </div>
           <Image
+            loader={microCMSLoader}
             className={styles.hiringImg}
             src="/img-hiring.jpg"
             alt=""

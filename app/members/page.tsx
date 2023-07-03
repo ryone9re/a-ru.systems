@@ -1,4 +1,4 @@
-import { getMembersList } from '@/libs/microcms';
+import { getMembersList, microCMSLoader } from '@/libs/microcms';
 import Image from 'next/image';
 import styles from './page.module.css';
 
@@ -25,6 +25,7 @@ export default async function Page({ searchParams }: Props) {
           {data.contents.map((member) => (
             <li key={member.id} className={styles.list}>
               <Image
+                loader={microCMSLoader}
                 src={member.image?.url as string}
                 alt=""
                 width={member.image?.width}

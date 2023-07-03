@@ -1,9 +1,9 @@
-import Link from 'next/link';
+import { Article, microCMSLoader } from '@/libs/microcms';
 import Image from 'next/image';
-import { Article } from '@/libs/microcms';
-import styles from './index.module.css';
-import PublishedDate from '../Date';
+import Link from 'next/link';
 import Category from '../Category';
+import PublishedDate from '../Date';
+import styles from './index.module.css';
 
 type Props = {
   news: Article;
@@ -15,6 +15,7 @@ export default function NewsListItem({ news }: Props) {
       <Link href={`/news/${news.id}`} className={styles.link}>
         {news.thumbnail ? (
           <Image
+            loader={microCMSLoader}
             src={news.thumbnail?.url}
             alt=""
             className={styles.image}
@@ -23,6 +24,7 @@ export default function NewsListItem({ news }: Props) {
           />
         ) : (
           <Image
+            loader={microCMSLoader}
             className={styles.image}
             src="/no-image.png"
             alt="No Image"

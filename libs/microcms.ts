@@ -1,10 +1,10 @@
-import { createClient } from 'microcms-js-sdk';
 import type {
-  MicroCMSQueries,
-  MicroCMSImage,
-  MicroCMSDate,
   MicroCMSContentId,
+  MicroCMSDate,
+  MicroCMSImage,
+  MicroCMSQueries,
 } from 'microcms-js-sdk';
+import { createClient } from 'microcms-js-sdk';
 import { notFound } from 'next/navigation';
 
 // カテゴリーの型定義
@@ -104,4 +104,9 @@ export const getMembersList = async (queries?: MicroCMSQueries) => {
     })
     .catch(notFound);
   return listData;
+};
+
+// 画像最適化ローダー
+export const microCMSLoader = ({ src, width }: { src: string; width: number }) => {
+  return `${src}?auto=format&fit=max&w=${width}`;
 };
