@@ -5,11 +5,11 @@ import styles from './layout.module.css';
 
 export const metadata = {
   metadataBase: new URL(process.env.BASE_URL || 'http://localhost:3000'),
-  title: 'シンプルなコーポレートサイト',
-  description: 'microCMS公式が提供するシンプルなコーポレートサイトのテンプレートです。',
+  title: 'アールシステム',
+  description: 'アールシステムの公式サイトです｡',
   openGraph: {
-    title: 'シンプルなコーポレートサイト',
-    description: 'microCMS公式が提供するシンプルなコーポレートサイトのテンプレートです。',
+    title: 'アールシステム',
+    description: 'アールシステムの公式サイトです｡',
     images: '/ogp.png',
   },
   alternates: {
