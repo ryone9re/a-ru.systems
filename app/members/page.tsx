@@ -1,7 +1,6 @@
-import Image from 'next/image';
 import { getMembersList } from '@/libs/microcms';
+import Image from 'next/image';
 import styles from './page.module.css';
-import ButtonLink from '@/components/ButtonLink';
 
 type Props = {
   searchParams: {
@@ -10,6 +9,8 @@ type Props = {
 };
 
 export const revalidate = 60;
+
+export const runtime = 'edge';
 
 export default async function Page({ searchParams }: Props) {
   const data = await getMembersList({

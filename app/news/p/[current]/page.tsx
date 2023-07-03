@@ -1,7 +1,7 @@
-import { getNewsList } from '@/libs/microcms';
-import { NEWS_LIST_LIMIT } from '@/constants';
-import Pagination from '@/components/Pagination';
 import ArticleList from '@/components/NewsList';
+import Pagination from '@/components/Pagination';
+import { NEWS_LIST_LIMIT } from '@/constants';
+import { getNewsList } from '@/libs/microcms';
 
 type Props = {
   params: {
@@ -10,6 +10,8 @@ type Props = {
 };
 
 export const revalidate = 60;
+
+export const runtime = 'edge';
 
 export default async function Page({ params }: Props) {
   const current = parseInt(params.current as string, 10);

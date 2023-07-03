@@ -1,8 +1,8 @@
-import { Metadata } from 'next';
-import { getNewsDetail } from '@/libs/microcms';
 import Article from '@/components/Article';
-import styles from './page.module.css';
 import ButtonLink from '@/components/ButtonLink';
+import { getNewsDetail } from '@/libs/microcms';
+import { Metadata } from 'next';
+import styles from './page.module.css';
 
 type Props = {
   params: {
@@ -14,6 +14,8 @@ type Props = {
 };
 
 export const revalidate = 60;
+
+export const runtime = 'edge';
 
 export async function generateMetadata({ params, searchParams }: Props): Promise<Metadata> {
   const data = await getNewsDetail(params.slug, {

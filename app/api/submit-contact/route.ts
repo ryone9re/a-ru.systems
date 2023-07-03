@@ -5,6 +5,8 @@ function validateEmail(email: string) {
   return pattern.test(email);
 }
 
+export const runtime = 'edge';
+
 export async function POST(request: NextRequest) {
   const json = await request.json();
   const { lastname, firstname, company, email, message } = json;
